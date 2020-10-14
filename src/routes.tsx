@@ -1,0 +1,23 @@
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Landing from './pages/Landing';
+import orfanatos from './pages/orfanatos';
+import Orphanage from './pages/Orphanage';
+import CreateOrphanage from './pages/CreateOrphanage';
+
+function Routes() {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" exact component={Landing}/>
+                <Route path="/app" component={orfanatos}/>
+
+                <Route path="/orfanatos/criar" component={CreateOrphanage}/>
+                <Route path="/orfanato/:id" component={Orphanage}/>
+            </Switch>
+        </BrowserRouter>
+    );
+}
+
+export default Routes;
